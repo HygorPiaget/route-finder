@@ -48,7 +48,7 @@
 
         // Load density GeoJSON
         function loadDensityData() {
-            return $.getJSON("https://www.dropbox.com/scl/fi/8vbm96bv14qfgoapd4xvh/density.geojson?rlkey=fgsjdciqm8wd33a2o9yqjtyxm&st=qrc7n1rf&dl=0", function(data) {
+            return $.getJSON("https://dl.dropboxusercontent.com/scl/fi/8vbm96bv14qfgoapd4xvh/density.geojson?rlkey=fgsjdciqm8wd33a2o9yqjtyxm&st=qrc7n1rf&dl=0", function(data) {
                 densityData = data;
                 buildDensityIndex();
             });
