@@ -48,7 +48,7 @@
 
         // Load density GeoJSON
         function loadDensityData() {
-            return $.getJSON("https://dl.dropboxusercontent.com/scl/fi/8vbm96bv14qfgoapd4xvh/density.geojson?rlkey=fgsjdciqm8wd33a2o9yqjtyxm&st=qrc7n1rf&dl=0", function(data) {
+            return $.getJSON("https://dl.dropboxusercontent.com/scl/fi/8vbm96bv14qfgoapd4xvh/density.geojson?rlkey=fgsjdciqm8wd33a2o9yqjtyxm&st=qrc7n1rf&dl=0", function(data) {  // Update this URL with your actual modified Dropbox link
                 densityData = data;
                 buildDensityIndex();
             });
@@ -80,7 +80,7 @@
         }
 
         function getWalkingRoute(startCoords, endCoords) {
-            var osrmUrl = 'http://router.project-osrm.org/route/v1/walking/';
+            var osrmUrl = 'https://router.project-osrm.org/route/v1/walking/';
             var coordinates = startCoords[1] + ',' + startCoords[0] + ';' + endCoords[1] + ',' + endCoords[0];
             var url = osrmUrl + coordinates + '?overview=full&geometries=geojson';
             return $.ajax({
@@ -167,4 +167,3 @@
     </script>
 </body>
 </html>
-
